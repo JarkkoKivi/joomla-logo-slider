@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Tradotim Oy Slider</name>
+    <author>Jarkko Kivi</author>
+    <version>1.0.0</version>
+    <description>Tradotim Slider Moduuli</description>
+    <files>
+        <filename>mod_tradotim_slider.xml</filename>
+        <filename module="mod_tradotim_slider">mod_tradotim_slider.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tradotim_slider_main.js</filename>
+        <filename>tradotim_slider.css</filename>
+    </files>
+    <folder>sql</folder>
+    <config></config>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/mysql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/mysql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <update> 
+        <schemas>
+            <schemapath type="mysql">sql/mysql/updates</schemapath> 
+        </schemas> 
+    </update>
+
+
+</extension>
